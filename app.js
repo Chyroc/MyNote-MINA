@@ -4,7 +4,7 @@ const APP_NAME = 'WODEBENZI'
 const SENSE_NAME = `${APP_NAME}_senses`
 
 const getSenses = () => {
-  return JSON.parse(wx.getStorageSync(SENSE_NAME) || '[]')
+  return JSON.parse(wx.getStorageSync(SENSE_NAME) || '[{"text": "", "image": ""}]')
 }
 
 const setSense = (sense, append = true) => {
@@ -45,6 +45,9 @@ App({
   setSense: setSense,
   globalData: {
     userInfo: null,
-    senses: null
+    senses: {
+      text: '',
+      image: ''
+    }
   }
 })
