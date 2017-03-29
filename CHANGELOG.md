@@ -1,5 +1,15 @@
 # Change Log
 
+## [v0.1.2](https://github.com/Chyroc/MyNote-MINA/tree/v0.1.2) (2017-03-29)
+[Full Changelog](https://github.com/Chyroc/MyNote-MINA/compare/v0.1.1...v0.1.2)
+
+**Merged pull requests:**
+
+- remove-log [\#8](https://github.com/Chyroc/MyNote-MINA/pull/8) ([Chyroc](https://github.com/Chyroc))
+- Add upload image [\#7](https://github.com/Chyroc/MyNote-MINA/pull/7) ([Chyroc](https://github.com/Chyroc))
+- add-delete-msg [\#6](https://github.com/Chyroc/MyNote-MINA/pull/6) ([Chyroc](https://github.com/Chyroc))
+- Release/v0.1.1 [\#5](https://github.com/Chyroc/MyNote-MINA/pull/5) ([Chyroc](https://github.com/Chyroc))
+
 ## [v0.1.1](https://github.com/Chyroc/MyNote-MINA/tree/v0.1.1) (2017-03-29)
 [Full Changelog](https://github.com/Chyroc/MyNote-MINA/compare/v0.1.0...v0.1.1)
 
