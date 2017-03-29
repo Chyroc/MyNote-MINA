@@ -9,15 +9,14 @@
 			<textarea placeholder="这里写文字啊笨蛋" name="textarea" value="{{textValue}}"  />
 			<button class="weui-btn" type="primary" form-type="submit">确定</button>
 		</form>
-		<view class="section">
-			<scroll-view scroll-y="true" style="height: 200px;" bindscrolltoupper="upper" bindscrolltolower="lower"
-			             bindscroll="scroll">
-				<view class="weui-cells__title">
-					<view wx:for="{{senses}}">
-						<view class="weui-cells weui-cells_after-title">{{item}}</view>
-					</view>
-				</view>
-			</scroll-view>
-		</view>
 	</view>
+</view>
+<view class="section">
+	<scroll-view scroll-y="true" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll">
+		<view class="weui-cells__title">
+			<view wx:for="{{senses}}">
+				<view class="weui-cells weui-cells_after-title">{{item}}</view>
+			</view>
+		</view>
+	</scroll-view>
 </view>
