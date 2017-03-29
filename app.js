@@ -2,7 +2,7 @@
 const APP_NAME = 'WODEBENZI'
 const SENSE_NAME = `${APP_NAME}_senses`
 
-const getSenses = () =>{
+const getSenses = () => {
   return JSON.parse(wx.getStorageSync(SENSE_NAME) || '[]')
 }
 
@@ -18,18 +18,18 @@ App({
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
   },
-  getUserInfo:function(cb){
+  getUserInfo: function (cb) {
     var that = this
-    if(this.globalData.userInfo){
-      typeof cb == "function" && cb(this.globalData.userInfo) && console.log(this.globalData.userInfo)
-    }else{
+    if (this.globalData.userInfo) {
+      typeof cb == "function" && cb(this.globalData.userInfo)
+    } else {
       //调用登录接口
       wx.login({
         success: function () {
           wx.getUserInfo({
             success: function (res) {
               that.globalData.userInfo = res.userInfo
-              typeof cb == "function" && cb(that.globalData.userInfo) && console.log(that.globalData.userInfo)
+              typeof cb == "function" && cb(that.globalData.userInfo)
             }
           })
         }
@@ -38,7 +38,7 @@ App({
   },
   getSenses: getSenses,
   setSense: setSense,
-  globalData:{
+  globalData: {
     userInfo: null,
     senses: null
   }
