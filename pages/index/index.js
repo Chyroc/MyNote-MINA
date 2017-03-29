@@ -28,6 +28,9 @@ Page({
       this.setData({
         senses: app.getSenses()
       })
+      this.setData({
+        textValue: null
+      })
     }
   },
   onLoad: function () {
