@@ -7,9 +7,13 @@ const getSenses = () => {
   return JSON.parse(wx.getStorageSync(SENSE_NAME) || '[]')
 }
 
-const setSense = (sense) => {
-  const senses = getSenses()
-  wx.setStorageSync(SENSE_NAME, JSON.stringify([...senses, sense]))
+const setSense = (sense, append = true) => {
+  if (append) {
+    const senses = getSenses()
+    wx.setStorageSync(SENSE_NAME, JSON.stringify([...senses, sense]))
+  } else {
+    wx.setStorageSync(SENSE_NAME, JSON.stringify(sense))
+  }
 }
 
 App({
