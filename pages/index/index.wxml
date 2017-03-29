@@ -6,7 +6,7 @@
 	</view>
 	<view class="usermotto">
 		<form bindsubmit="bindFormSubmit">
-			<textarea placeholder="这里写文字啊笨蛋" name="textarea"  />
+			<textarea placeholder="这里写文字啊笨蛋" name="textarea" value="{{textValue}}"  />
 			<button class="weui-btn" type="primary" form-type="submit">确定</button>
 		</form>
 		<view class="section">
