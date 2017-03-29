@@ -33,6 +33,16 @@ Page({
       })
     }
   },
+  deleteText: function (e) {
+    const deletetextindex = e.target.dataset.deletetextindex
+    const senses = app.getSenses()
+    const sense_new = [...senses.slice(0, deletetextindex), ...senses.slice(deletetextindex + 1, senses.length + 1)]
+    app.setSense(sense_new, false)
+    this.setData({
+      senses: sense_new
+
+    })
+  },
   onLoad: function () {
     console.log('onLoad')
     this.setData({

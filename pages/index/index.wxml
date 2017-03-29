@@ -15,8 +15,12 @@
 	<scroll-view scroll-y="true" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll">
 		<view class="weui-cells__title">
 			<view wx:for="{{senses}}">
-				<view class="weui-cells weui-cells_after-title">{{item}}</view>
+				<view class="weui-cells weui-cells_after-title">
+					<button class="weui-btn weui-btn_mini weui-btn_warn" size="mini" plain="true" type="warn" form-type="submit"
+					        bindtap="deleteText" data-deleteTextindex="{{index}}">删除</button>
+					{{item}}
+				</view>
+				</view>
 			</view>
-		</view>
-	</scroll-view>
-</view>
+		</scroll-view>
+	</view>
