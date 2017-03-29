@@ -20,8 +20,10 @@
 		<view class="weui-cells__title">
 			<view wx:for="{{senses}}">
 				<view class="weui-cells weui-cells_after-title">
-					<button class="weui-btn weui-btn_mini weui-btn_warn" size="mini" plain="true" type="warn" form-type="submit"
-					        bindtap="deleteText" data-deleteTextindex="{{index}}">删除</button>
+					<view wx:if="{{item.text}}">
+						<button class="weui-btn weui-btn_mini weui-btn_warn" size="mini" plain="true" type="warn" form-type="submit"
+						        bindtap="deleteText" data-deleteTextindex="{{index}}">删除</button>
+					</view>
 					{{item.text}}
 								<view wx:if="{{item.image}}">
 					<image style="width: 200px; height: 200px; background-color: #eeeeee;" mode="aspectFit" src="{{item.image}}"
