@@ -1,5 +1,15 @@
 # Change Log
 
+## [v0.1.1](https://github.com/Chyroc/MyNote-MINA/tree/v0.1.1) (2017-03-29)
+[Full Changelog](https://github.com/Chyroc/MyNote-MINA/compare/v0.1.0...v0.1.1)
+
+**Merged pull requests:**
+
+- fix-scroll-hight [\#4](https://github.com/Chyroc/MyNote-MINA/pull/4) ([Chyroc](https://github.com/Chyroc))
+- 提交后清空文本框 [\#3](https://github.com/Chyroc/MyNote-MINA/pull/3) ([Chyroc](https://github.com/Chyroc))
+- add weui wxss [\#2](https://github.com/Chyroc/MyNote-MINA/pull/2) ([Chyroc](https://github.com/Chyroc))
+- Release/v0.1.0 [\#1](https://github.com/Chyroc/MyNote-MINA/pull/1) ([Chyroc](https://github.com/Chyroc))
+
 ## [v0.1.0](https://github.com/Chyroc/MyNote-MINA/tree/v0.1.0) (2017-03-29)
 
 
