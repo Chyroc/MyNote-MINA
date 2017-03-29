@@ -1,5 +1,5 @@
 //app.js
-const VERSION = 'v0.1.2'
+const VERSION = 'v0.1.3'
 const APP_NAME = 'WODEBENZI'
 const SENSE_NAME = `${APP_NAME}_senses`
 
