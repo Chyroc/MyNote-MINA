@@ -8,7 +8,8 @@ Page({
   data: {
     inputValue: '',
     userInfo: {},
-    senses: []
+    senses: [],
+    image: ''
   },
   // 事件处理函数
   bindViewTap: function () {
@@ -24,12 +25,16 @@ Page({
         duration: 800
       })
     } else {
-      app.setSense(e.detail.value.textarea)
+      app.setSense({
+        text: e.detail.value.textarea,
+        image: this.data.image
+      })
       this.setData({
         senses: app.getSenses()
       })
       this.setData({
-        textValue: null
+        textValue: null,
+        image: ''
       })
     }
   },
@@ -40,7 +45,31 @@ Page({
     app.setSense(sense_new, false)
     this.setData({
       senses: sense_new
-
+    })
+  },
+  chooseImage: function (e) {
+    var that = this
+    wx.chooseImage({
+      count: 1,
+      sizeType: ['original', 'compressed'],
+      sourceType: ['album', 'camera'],
+      success: function (res) {
+        const tempFilePaths = res.tempFilePaths
+        console.log(tempFilePaths)
+        that.setData({
+          image: tempFilePaths[0]
+        })
+        // wx.previewImage({
+        //   urls: tempFilePaths
+        // })
+        // wx.saveFile({
+        //   tempFilePath: tempFilePaths[0],
+        //   success: function (res) {
+        //     var savedFilePath = res.savedFilePath
+        //     console.log(savedFilePath)
+        //   }
+        // })
+      }
     })
   },
   onLoad: function () {

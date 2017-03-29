@@ -7,6 +7,10 @@
 	<view class="usermotto">
 		<form bindsubmit="bindFormSubmit">
 			<textarea placeholder="这里写文字啊笨蛋" name="textarea" value="{{textValue}}"  />
+			<view wx:if="{{image}}">
+				<image style="width: 200px; height: 200px; background-color: #eeeeee;" mode="aspectFit" src="{{image}}"></image>
+			</view>
+			<button class="weui-btn" form-type="submit" bindtap="chooseImage">点击上传图片</button>
 			<button class="weui-btn" type="primary" form-type="submit">确定</button>
 		</form>
 	</view>
@@ -18,9 +22,12 @@
 				<view class="weui-cells weui-cells_after-title">
 					<button class="weui-btn weui-btn_mini weui-btn_warn" size="mini" plain="true" type="warn" form-type="submit"
 					        bindtap="deleteText" data-deleteTextindex="{{index}}">删除</button>
-					{{item}}
-				</view>
+					{{item.text}}
+								<view wx:if="{{item.image}}">
+					<image style="width: 200px; height: 200px; background-color: #eeeeee;" mode="aspectFit" src="{{item.image}}"></image>
 				</view>
 			</view>
-		</scroll-view>
+		</view>
 	</view>
+</scroll-view>
+</view>
