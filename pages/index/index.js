@@ -11,12 +11,6 @@ Page({
     senses: [],
     image: ''
   },
-  // 事件处理函数
-  bindViewTap: function () {
-    wx.navigateTo({
-      url: '../logs/logs'
-    })
-  },
   bindFormSubmit: function (e) {
     if (_.isEmpty(e.detail.value.textarea)) {
       wx.showToast({
