@@ -24,7 +24,8 @@
 					        bindtap="deleteText" data-deleteTextindex="{{index}}">删除</button>
 					{{item.text}}
 								<view wx:if="{{item.image}}">
-					<image style="width: 200px; height: 200px; background-color: #eeeeee;" mode="aspectFit" src="{{item.image}}"></image>
+					<image style="width: 200px; height: 200px; background-color: #eeeeee;" mode="aspectFit" src="{{item.image}}"
+					       data-url="{{item.image}}" bindtap="previewImage"></image>
 				</view>
 			</view>
 		</view>

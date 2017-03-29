@@ -59,17 +59,13 @@ Page({
         that.setData({
           image: tempFilePaths[0]
         })
-        // wx.previewImage({
-        //   urls: tempFilePaths
-        // })
-        // wx.saveFile({
-        //   tempFilePath: tempFilePaths[0],
-        //   success: function (res) {
-        //     var savedFilePath = res.savedFilePath
-        //     console.log(savedFilePath)
-        //   }
-        // })
       }
+    })
+  },
+  previewImage: function (e) {
+    const url = e.target.dataset.url
+    wx.previewImage({
+      urls: [url]
     })
   },
   onLoad: function () {
