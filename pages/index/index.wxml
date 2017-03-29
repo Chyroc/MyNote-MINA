@@ -1,28 +1,23 @@
-<!--index.wxml-->
+<!-- index.wxml -->
 <view class="container">
-  <view  bindtap="bindViewTap" class="userinfo">
-    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
-    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-  </view>
- 
-  <view class="usermotto">
-	  <form bindsubmit="bindFormSubmit">
-	    <textarea placeholder="这里写文字啊笨蛋" name="textarea"/>
-	    <button type="primary" form-type="submit">确定</button>
-	  </form>
-
-
-	<view class="section">
-		<scroll-view scroll-y="true" style="height: 200px;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
-			<view wx:for="{{senses}}">
-				<text>{{index}}: {{item}}\n</text>
-			</view>
-		</scroll-view>
+	<view bindtap="bindViewTap" class="userinfo">
+		<image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+		<text class="userinfo-nickname">{{userInfo.nickName}}</text>
 	</view>
-
-
-  </view>
-
-
-
+	<view class="usermotto">
+		<form bindsubmit="bindFormSubmit">
+			<textarea placeholder="这里写文字啊笨蛋" name="textarea"  />
+			<button class="weui-btn" type="primary" form-type="submit">确定</button>
+		</form>
+		<view class="section">
+			<scroll-view scroll-y="true" style="height: 200px;" bindscrolltoupper="upper" bindscrolltolower="lower"
+			             bindscroll="scroll">
+				<view class="weui-cells__title">
+					<view wx:for="{{senses}}">
+						<view class="weui-cells weui-cells_after-title">{{item}}</view>
+					</view>
+				</view>
+			</scroll-view>
+		</view>
+	</view>
 </view>
