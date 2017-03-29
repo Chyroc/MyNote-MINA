@@ -12,6 +12,9 @@ Page({
     image: ''
   },
   bindFormSubmit: function (e) {
+    if (!_.isEmpty(e.detail.target.dataset.isamage)) {
+      return
+    }
     if (_.isEmpty(e.detail.value.textarea)) {
       wx.showToast({
         title: '文字不能为空',
