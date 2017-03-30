@@ -4,15 +4,15 @@ const APP_NAME = 'WODEBENZI'
 const SENSE_NAME = `${APP_NAME}_senses`
 
 const getSenses = () => {
-  return JSON.parse(wx.getStorageSync(SENSE_NAME) || '[{"text": "", "image": ""}]')
+  return wx.getStorageSync(SENSE_NAME) || [{"text": "", "image": ""}]
 }
 
 const setSense = (sense, append = true) => {
   if (append) {
     const senses = getSenses()
-    wx.setStorageSync(SENSE_NAME, JSON.stringify([...senses, sense]))
+    wx.setStorageSync(SENSE_NAME, [...senses, sense])
   } else {
-    wx.setStorageSync(SENSE_NAME, JSON.stringify(sense))
+    wx.setStorageSync(SENSE_NAME, sense)
   }
 }
 
